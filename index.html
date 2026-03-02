@@ -1023,6 +1023,46 @@
     }
 
     @media (max-width:640px) {
+
+      /* Mobile header only */
+      .top {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 12px;
+      }
+
+      .brand {
+        order: 1;
+        font-size: 20px;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .socials {
+        order: 2;
+        gap: 8px;
+      }
+
+      .social {
+        width: 28px;
+        height: 28px;
+        border-width: 1.5px;
+      }
+
+      .social svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .top-cta {
+        order: 3;
+        padding: 9px 11px;
+        font-size: 12px;
+        line-height: 1;
+        white-space: nowrap;
+      }
       .hero {
         padding: 60px 20px
       }
