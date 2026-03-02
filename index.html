@@ -193,6 +193,9 @@
       z-index: 1;
     }
 
+    .h-mobile{display:none}
+    .h-desktop{display:inline}
+
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(36px, 5vw, 72px);
@@ -1025,12 +1028,15 @@
       }
 
       .hero h1 {
-        font-size: 48px;
-        line-height: 1.1;
+        font-size: 42px;
+        line-height: 1.08;
         max-width: 100%;
         margin-bottom: 30px;
         text-align: center;
       }
+
+      .h-desktop{display:none}
+      .h-mobile{display:inline}
 
       .br-m {
         display: block;
@@ -1095,13 +1101,19 @@
       <header class="hero">
         <div class="hero-gradient"></div>
         <h1>
-          <span class="headline-blue">Kompletní digitální</span>
-          <div class="br-m"></div>
-          <span class="headline-blue">řešení</span>
-          <div class="br-d"></div>
-          <span>pro <span id="rotating-word">značky</span>,</span>
-          <div class="br-m"></div>
-          <span>které chtějí růst</span>
+          <span class="h-desktop">
+            <span class="headline-blue">Kompletní digitální</span>
+            <div class="br-m"></div>
+            <span class="headline-blue">řešení</span>
+            <div class="br-d"></div>
+            <span>pro <span id="rotating-word">značky</span>,</span>
+            <div class="br-m"></div>
+            <span>které chtějí růst</span>
+          </span>
+          <span class="h-mobile">
+            <span class="headline-blue">Kompletní digitální Řešení</span><br>
+            pro značky/firmy, které chtějí růst
+          </span>
         </h1>
         <div class="hero-collage">
           <div class="hero-track">
