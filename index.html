@@ -193,8 +193,13 @@
       z-index: 1;
     }
 
-    .h-mobile{display:none}
-    .h-desktop{display:inline}
+    .h-mobile {
+      display: none
+    }
+
+    .h-desktop {
+      display: inline
+    }
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
@@ -509,11 +514,122 @@
       height: 42px;
       stroke: var(--primary);
       transition: all 0.4s ease;
+      overflow: visible;
     }
 
     .service-card:hover svg {
       stroke: #fff;
       transform: scale(1.1);
+    }
+
+    .service-card:hover .anim-mobile {
+      animation: floatMobile 2s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+
+    .service-card:hover .anim-thumb {
+      animation: rockThumb 0.8s ease-in-out infinite;
+      transform-origin: bottom left;
+    }
+
+    .service-card:hover .anim-monitor {
+      animation: pulseMonitor 2s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .service-card:hover .anim-cart {
+      animation: driveCart 1.5s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .service-card:hover .anim-chart-line {
+      animation: bounceChart 1.5s ease-in-out infinite;
+      transform-origin: bottom center;
+    }
+
+    .service-card:hover .anim-pen {
+      animation: drawPen 1.2s ease-in-out infinite;
+      transform-origin: bottom left;
+    }
+
+    @keyframes floatMobile {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    @keyframes rockThumb {
+
+      0%,
+      100% {
+        transform: rotate(0deg) scale(1);
+      }
+
+      25% {
+        transform: rotate(-15deg) scale(1.1);
+      }
+
+      75% {
+        transform: rotate(5deg) scale(1.1);
+      }
+    }
+
+    @keyframes pulseMonitor {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes driveCart {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(4px);
+      }
+    }
+
+    @keyframes bounceChart {
+
+      0%,
+      100% {
+        transform: translateY(0) scaleY(1);
+      }
+
+      50% {
+        transform: translateY(-4px) scaleY(1.1);
+      }
+    }
+
+    @keyframes drawPen {
+
+      0%,
+      100% {
+        transform: rotate(0) translate(0, 0);
+      }
+
+      25% {
+        transform: rotate(-5deg) translate(-1px, 1px);
+      }
+
+      75% {
+        transform: rotate(5deg) translate(1px, -1px);
+      }
     }
 
     .service-card h3 {
@@ -580,7 +696,9 @@
       justify-content: center
     }
 
-    .hype-orange{color:#ff8a3d}
+    .hype-orange {
+      color: #ff8a3d
+    }
 
     .collab .left h3 {
       font-family: 'Space Grotesk', sans-serif;
@@ -1077,6 +1195,7 @@
         line-height: 1;
         white-space: nowrap;
       }
+
       .hero {
         padding: 60px 20px
       }
@@ -1089,8 +1208,13 @@
         text-align: center;
       }
 
-      .h-desktop{display:none}
-      .h-mobile{display:inline}
+      .h-desktop {
+        display: none
+      }
+
+      .h-mobile {
+        display: inline
+      }
 
       .br-m {
         display: block;
@@ -1324,7 +1448,8 @@
       </header>
 
       <div class="intro">
-        <p>Pomáhám firmám růst díky správně nastavené marketingové strategii, vizuální identitě, funkčního webu a aplikacím na míru. Kombinuju strategický plán, vývoj i vizuál
+        <p>Pomáhám firmám růst díky správně nastavené marketingové strategii, vizuální identitě, funkčního webu a
+          aplikacím na míru. Kombinuju strategický plán, vývoj i vizuál
           tak, aby výstup nejen dobře vypadal, ale hlavně přinášel výsledky.</p>
       </div>
 
@@ -1338,9 +1463,11 @@
             <div class="num-box">
               <span class="num">01</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="3" y="4" width="18" height="12" rx="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M8 20h8" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M12 16v4" stroke-linecap="round" stroke-linejoin="round" />
+                <g class="anim-monitor">
+                  <rect x="3" y="4" width="18" height="12" rx="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8 20h8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 16v4" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
               </svg>
             </div>
             <h3>Webové stránky</h3>
@@ -1356,9 +1483,11 @@
             <div class="num-box">
               <span class="num">02</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  stroke-linecap="round" stroke-linejoin="round" />
+                <g class="anim-cart">
+                  <path
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
               </svg>
             </div>
             <h3>E-shopy</h3>
@@ -1374,11 +1503,11 @@
             <div class="num-box">
               <span class="num">03</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="4" y="4" width="16" height="16" rx="3" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M8 8h8" stroke-linecap="round" />
-                <path d="M8 12h3" stroke-linecap="round" />
-                <path d="M13 12h3" stroke-linecap="round" />
-                <path d="M8 16h8" stroke-linecap="round" />
+                <g class="anim-mobile">
+                  <rect x="5" y="2" width="14" height="20" rx="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 18h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path d="M9 7h6M9 11h6M9 15h4" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
               </svg>
             </div>
             <h3>Vývoj aplikací</h3>
@@ -1394,12 +1523,16 @@
             <div class="num-box">
               <span class="num">04</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <!-- Axes -->
                 <path d="M3 3v18h18" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M7 15l4-4 3 3 4-6" stroke-linecap="round" stroke-linejoin="round" />
-                <circle cx="7" cy="15" r="1" />
-                <circle cx="11" cy="11" r="1" />
-                <circle cx="14" cy="14" r="1" />
-                <circle cx="18" cy="8" r="1" />
+                <!-- Animated Line & Dots -->
+                <g class="anim-chart-line">
+                  <path d="M7 15l4-4 3 3 4-6" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="7" cy="15" r="1" />
+                  <circle cx="11" cy="11" r="1" />
+                  <circle cx="14" cy="14" r="1" />
+                  <circle cx="18" cy="8" r="1" />
+                </g>
               </svg>
             </div>
             <h3>Marketing</h3>
@@ -1415,10 +1548,11 @@
             <div class="num-box">
               <span class="num">05</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="3" y="3" width="18" height="18" rx="4" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M8 14v2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M12 10v6" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M16 7v9" stroke-linecap="round" stroke-linejoin="round" />
+                <g class="anim-thumb">
+                  <path
+                    d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
               </svg>
             </div>
             <h3>Sociální sítě</h3>
@@ -1434,10 +1568,12 @@
             <div class="num-box">
               <span class="num">06</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 19l7-7 3 3-7 7-3-3z" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M2 2l7.5 1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M7 11L2 2l9 5" stroke-linecap="round" stroke-linejoin="round" />
+                <g class="anim-pen">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2 2l7.5 1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M7 11L2 2l9 5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
               </svg>
             </div>
             <h3>Design</h3>
@@ -1571,7 +1707,8 @@
       <section class="collab">
         <div class="left">
           <h3><span class="hype-orange">Hype Print</span><br>tiskařská výroba</h3>
-          <p>Pro klienty zajišťuji i tiskové služby navíc: letáky, vizitky, bannery, samolepky, etikety, roll-upy a další reklamní materiály od návrhu po finální výrobu.</p>
+          <p>Pro klienty zajišťuji i tiskové služby navíc: letáky, vizitky, bannery, samolepky, etikety, roll-upy a
+            další reklamní materiály od návrhu po finální výrobu.</p>
         </div>
         <div class="right"><img
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
@@ -1645,7 +1782,7 @@
         </div>
 
         <div class="footer-bottom">
-                    <div class="footer-info">
+          <div class="footer-info">
             <span>© <span id="y"></span> Daniel Ramos — Všechna práva vyhrazena.</span>
             <div class="location">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="loc-icon">
